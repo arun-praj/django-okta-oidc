@@ -1,2 +1,4 @@
 Django==4.1.4
 mozilla-django-oidc==3.0.0
+requests==2.28.2
+djangorestframework==3.14.0

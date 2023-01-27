@@ -9,12 +9,18 @@
       <title>Document</title>
    </head>
 
-   <body>
+   <>
       {% if user.is_authenticated %}
       <p>Current user: {{ user.email }}</p>
       <p>logged</p>
+      
+      <form action="{% url 'oidc_logout' %}" method="post">
+         {% csrf_token %}
+         <input type="submit" value="logout">
+      </form>
       {% else %}
       <p>not logged</p>
       {% endif %}
+
    </body>
 </html>
